@@ -1,0 +1,140 @@
+ORACLE DATABASE 11g EXPRESS EDITION setup
+
+Content
+-------
+1. Creating a user account and granting necessary privileges
+	1.1 Using Microsoft Command Prompt
+	1.2 Using Oracle SQL Command Line
+
+2. Granting CREATE VIEW privilege to <USER_NAME>
+
+-------------------------------------------------------------------------------------
+Before you start creating tables you will have to create a user account and grant necessary privileges. To do so you will have to enter connect as System and then create a new user account.
+
+Once an account is created, grant necessary privileges using the statement grant connect, resource to userName. After that you can log in (connect) using the user account and start creating tables.
+
+
+-------------------------------------------------------------------------------------
+=====================================================================================
+1.1 Creating a user account and granting necessary privileges using
+Microsoft Command Prompt
+-------------------------------------------------------------------------------------
+
+Step 1. Open Command Prompt and type sqlplus to stat SQL*PLUS
+
+Step 2. Enter user-name: system and password that you set for the system when you installed Oracle 11g XE. (Note! Password is not show for security purpose.)
+
+Step 3. Create a new user by typing the following command
+		SQL>create user USERNAME identified by PASSWORD;
+E.g.:	SQL>create user yusuf identified by ys123;
+
+Step 4. Now grant the user necessary privileges by typing the following command
+		SQL>grant connect, resource to USERNAME;
+E.g.:	SQL>grant connect, resource to yusuf;
+Congratulation you have successfully created a new user account.
+
+Step 5. Log out of the current user account SYSTEM by typing exit
+		SQL>exit
+
+-------------------------------MICROSOFT COMMAND PROMPT OUTPUT-----------------------
+=====================================================================================
+Microsoft Windows [Version 6.1.7601]
+
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+C:\Users\USER_01>sqlplus
+SQL*Plus: Release 11.2.0.2.0 Production on Sat Feb 9 11:19:15 2013
+Copyright (c) 1982, 2010, Oracle.  All rights reserved.
+Enter user-name: system
+Enter password:
+Connected to:
+Oracle Database 11g Express Edition Release 11.2.0.2.0 - Production
+SQL> create user yusuf identified by ys123;
+User created.
+SQL> grant connect, resource to yusuf;
+Grant succeeded.
+SQL> exit
+Disconnected from Oracle Database 11g Express Edition Release 11.2.0.2.0 - Production
+
+-------------------------------------------------------------------------------------
+=====================================================================================
+1.2 Creating a user account and granting necessary privileges using
+ORACLE SQL Command Line
+-------------------------------------------------------------------------------------
+
+Step 1. First start the database.
+Click Start -> All Programs -> Oracle Database 11g Express Edition -> Start Database
+
+Step 2. Now start the SQL Command Line.
+Click Start -> All Programs -> Oracle Database 11g Express Edition -> Run SQL Command Line
+
+Step 3. Connect as the SYSTEM user
+		Type: connect
+		Enter user-name: system
+		Enter password: <password-for-system>
+System password is what you have set while installed Oracle 11g XE.
+(Note! Password is not show for security purpose.)
+
+Step 4. Create a new user by typing the following command
+		SQL>create user USERNAME identified by PASSWORD;
+E.g.:	SQL>create user yusuf identified by ys123;
+
+Step 5. Now grant the user necessary privileges by typing the following command
+		SQL>grant connect, resource to USERNAME;
+E.g.:	SQL>grant connect, resource to yusuf;
+Congratulation you have successfully created a new user account.
+
+Step 6. Log out of the current user account SYSTEM by typing exit
+		SQL>exit
+
+------------------------------------ORACLE SQL*PLUS OUTPUT---------------------------
+=====================================================================================
+SQL*Plus: Release 11.2.0.2.0 Production on Sat Feb 9 11:43:55 2013
+Copyright (c) 1982, 2010, Oracle.  All rights reserved.
+SQL> connect
+Enter user-name: system
+Enter password:
+Connected.
+SQL> create user yusuf identified by ys123;
+User created.
+SQL> grant connect, resource to yusuf;
+Grant succeeded.
+SQL> exit
+
+
+-------------------------------------------------------------------------------------
+=====================================================================================
+2. Granting CREATE VIEW privilege to <USER_NAME>
+-------------------------------------------------------------------------------------
+
+Step 1. First start the database.
+Click Start -> All Programs -> Oracle Database 11g Express Edition -> Start Database
+
+Step 2. Now start the SQL Command Line.
+Click Start -> All Programs -> Oracle Database 11g Express Edition -> Run SQL Command Line
+
+Step 3. Connect as the SYSTEM user
+		Type: connect
+		Enter user-name: system
+		Enter password: <password-for-system>
+System password is what you have set while installed Oracle 11g XE.
+(Note! Password is not show for security purpose.)
+
+Step 4. Now grant the user CREATE VIEW privilege by typing the following command
+		SQL>grant create view to USER_NAME;
+E.g.:	SQL>grant create view to yusuf;
+Congratulation you have successfully granted CREATE VIEW privilege to USER_NAME
+
+Step 5. Log out of the current user account SYSTEM by typing exit
+		SQL>exit
+
+------------------------------------ORACLE SQL*PLUS OUTPUT---------------------------
+=====================================================================================
+SQL*Plus: Release 11.2.0.2.0 Production on Tue Apr 30 11:48:45 2013
+Copyright (c) 1982, 2010, Oracle.  All rights reserved.
+SQL> connect
+Enter user-name: system
+Enter password:
+Connected.
+SQL> grant create view to yusuf;
+Grant succeeded.
+SQL>
