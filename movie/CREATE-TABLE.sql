@@ -1,25 +1,29 @@
+/*For ORACLE DATABASE.
+Will need some modification to execute in MySQL and other Database software.
+*/
+
 create table cust
 (
-Cust_id varchar2(3) primary key,
-lname varchar2(15),
-fname varchar2(15),
-area varchar2(2),
+Cust_id varchar(3) primary key,
+lname varchar(15),
+fname varchar(15),
+area varchar(2),
 phone_no number(8)
 );
 
 create table movie
 (
 mv_no varchar(2) primary key,
-title varchar2(25),
-type varchar2(10),
-star varchar2(25)
+title varchar(25),
+type varchar(10),
+star varchar(25)
 );
 
 create table invoice
 (
-Inv_no varchar2(3) primary key,
+Inv_no varchar(3) primary key,
 Mv_no varchar(2),
-Cust_id varchar2(3),
+Cust_id varchar(3),
 Issue_date date,
 Return_date date
 );
