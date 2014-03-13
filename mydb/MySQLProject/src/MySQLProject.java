@@ -10,6 +10,7 @@
 public class MySQLProject {
     
     public static void main(String[] args) {
-    	SelectRow.all();
+    	//SelectRow.all();
+    	//SelectRow.byID(1);
     }
 }
