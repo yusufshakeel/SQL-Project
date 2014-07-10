@@ -5,7 +5,7 @@ SQL Project
 
 By: Yusuf Shakeel
 
-Date: 9 Feb 2013 Sat
+Date: 09 February 2013 Saturday
 
 
 [facebook.com/yusufshakeel](https://www.facebook.com/yusufshakeel)
